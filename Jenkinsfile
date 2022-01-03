@@ -6,6 +6,11 @@ pipeline{
                git 'https://github.com/kirtipaliwal23/simple-node-js-react-npm-app.git'
                }
             }
+			stage('install'){
+            steps{
+            bat "npm install"
+            }
+          }
          stage('env start'){
             steps{
             bat "npm run start"
